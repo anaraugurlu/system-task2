@@ -16,8 +16,7 @@ namespace system_task2.ViewModel
         public RelayCommand FromBtn { get; set; }
         public RelayCommand ToBtn { get; set; }
         public RelayCommand CopyBtn { get; set; }
-        public RelayCommand ResumeBtn { get; set; }
-        public RelayCommand PauseBtn { get; set; }
+       
         public string Encrypt { get; set; }
 
         string filetext = string.Empty;
@@ -102,27 +101,7 @@ namespace system_task2.ViewModel
                 MessageBox.Show("copy was ended");
             });
 
-            ResumeBtn = new RelayCommand((sender) =>
-            {
-                try
-                {
-                    thread.Resume();
-                }
-                catch (Exception)
-                {
-                }
-            });
-
-            PauseBtn = new RelayCommand((sender) =>
-            {
-                try
-                {
-                    thread.Suspend();
-                }
-                catch (Exception)
-                {
-                }
-            });
+          
         }
     }
 }
